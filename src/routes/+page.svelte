@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Header from '../components/Header.svelte'
+	import Header from '../components/Header.svelte';
 </script>
 
-<Header/>
+<Header />
 <h1>Hello World</h1>
