@@ -1,4 +1,9 @@
 <script lang="ts">
+	let showMenu = false;
+
+	function toggleNavbar() {
+		showMenu = !showMenu;
+	}
 </script>
 
 <header>
@@ -9,10 +14,30 @@
 					>Melt Course Driving School</span
 				>
 			</a>
-			<div
-				class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-				id="mobile-menu-2"
-			>
+
+			<div on:change={toggleNavbar} class="flex lg:hidden">
+				<button
+					type="button"
+					class="text-white hover:text-gray-400 focus:outline-none focus:text-gray-400"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+						/>
+					</svg>
+				</button>
+			</div>
+
+			<div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
 				<ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
 					<li>
 						<a
